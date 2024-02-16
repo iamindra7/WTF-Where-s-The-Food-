@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+::-webkit-scrollbar {
+  width: 16px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(92, 9, 9);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(247, 39, 39);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(248, 141, 141);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  padding: 30px;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background: linear-gradient(to bottom right, #ffffffbe, #ff0000b6),
+    url(images/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-wrapper {
+  position: absolute;
+  padding: 30px 0 0 30px;
+}
+.logo img {
+  height: 100px;
+  cursor: pointer;
+}
+.menu {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+}
+.menu a {
+  text-decoration: none;
+  padding-right: 20px;
+
+  color: white;
+  transition: all 0.2s;
+}
+.menu .active,
+.menu a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.text-box {
+  position: absolute;
+  text-align: center;
+  width: 70%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.text-box h1 .main-text {
+  color: rgb(255, 255, 255);
+  display: block;
+  font-family: "Rajdhani", sans-serif;
+  /* font-family: "Protest Riot", sans-serif; */
+  font-size: 5.5vw;
+  text-align: center;
+  color: linear;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.795);
+  animation: moveInLeft 1s ease-out;
+}
+.text-box h1 .sub-text {
+  display: block;
+  font-size: 1.5vw;
+  text-align: center;
+  color: black;
+  font-weight: 300;
+  animation: moveInRight 1s ease-out;
+}
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 100px;
+  /* position: absolute; */
+  /* transform: translateX(-50%); */
+}
+.btn-red {
+  background: rgb(255, 0, 0);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-animated {
+  animation: moveInBottom 1s ease-out;
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.about1,
+.about3 {
+  padding: 80px;
+  height: 100%;
+  width: 100%;
+  /* position: relative; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-images {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  /* animation: moveInLeft 5s ease-out 1s infinite; */
+  /* border: 5px solid red; */
+  /* width: 40%; */
+}
+.about-images img {
+  margin: 12px 12px 6px 12px;
+  height: 330px;
+  /* border: 10px solid black; */
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.808);
+}
+.about-images::before {
+  content: " ";
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  top: -76px;
+  left: -73px;
+
+  background: conic-gradient(rgb(247, 39, 39) 20deg, transparent 120deg);
+  animation: rotate 2s linear infinite;
+  z-index: -1;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.about-txt h1 {
+  font-family: "Rajdhani", sans-serif;
+}
+.about-txt {
+  display: block;
+  width: 40%;
+}
+.about2 {
+  background: #ff0000b6;
+  clip-path: polygon(0 10vh, 100% 0, 100% 70vh, 0 100%);
+  padding: 80px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+/* .about2 .about-txt {
+  text-align: right;
+} */
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.img-wrapper img {
+  display: inline-block;
+  box-shadow: 10px 10px 10px#9b9999;
+
+  height: 300px;
+}
+.img-wrapper img:nth-child(1) {
+  border-radius: 50% 5% 5% 10%;
+}
+.img-wrapper img:nth-child(2) {
+  border-radius: 30% 30% 5% 5%;
+}
+.img-wrapper img:nth-child(3) {
+  border-radius: 30% 30% 5% 5%;
+}
+.img-wrapper img:nth-child(4) {
+  border-radius: 5% 50% 10% 5%;
+}
+.img-wrapper img:nth-child(5) {
+  border-radius: 10% 5% 5% 50%;
+}
+.img-wrapper img:nth-child(6) {
+  border-radius: 5% 5% 30% 30%;
+}
+.img-wrapper img:nth-child(7) {
+  border-radius: 5% 5% 30% 30%;
+}
+.img-wrapper img:nth-child(8) {
+  border-radius: 5% 10% 50% 5%;
+}
+.contact {
+  position: relative;
+
+  width: 100%;
+  height: 70vh;
+  margin-top: 50px;
+  background: url(images/connect.jpg);
+  background-size: cover;
+  text-align: center;
+}
+.contact h2 {
+  /* font-family: "Protest Riot", sans-serif; */
+  font-family: "Rajdhani", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+}
+.input-n-map-wrapper {
+  position: absolute;
+  display: flex;
+  top: 100px;
+  justify-content: space-around;
+}
+.input {
+  display: block;
+  height: 70%;
+  width: 40%;
+}
+.email {
+  height: 40px;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.651);
+  border: none;
+  border-radius: 100px;
+}
+.input-text-box {
+  height: 65px;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.651);
+  border: none;
+  border-radius: 100px;
+}
+.btn-red {
+  background: #ff0000b6;
+}
+.input-n-map-wrapper p {
+  color: white;
+}
+.map {
+  display: block;
+}
+footer {
+  position: relative;
+  display: block;
+  height: 150px;
+  width: 100%;
+  background: #9b9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo {
+  display: block;
+}
+.footer-logo img {
+  height: 130px;
+}
+footer div {
+  font-size: 10px;
+  width: 18%;
+}
